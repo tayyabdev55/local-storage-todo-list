@@ -3,13 +3,6 @@ let ul   = document.querySelector("#getul");
 
 const todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-function openForm() {
-    document.querySelector("#addtask").style.display = "block";
-}
-
-function closeForm() {
-    document.querySelector("#addtask").style.display = "none";
-}
 
 function addtodo(event) {
 
