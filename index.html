@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Management</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-    
+
+    <div class="container">
+
+        <div class="topbar">
+            <div>
+                <h1>Task Manager</h1>
+                <p>Stay organized and get things done</p>
+            </div>
+
+            <button class="add-task-btn" onclick="openForm()">
+                <i class="fa-solid fa-plus"></i>
+                Add New Task
+            </button>
+        </div>
+
+        <form id="taskForm" onsubmit="addtodo(event)" class="task-form">
+
+            <div class="form-header">
+                <h2>New Task</h2>
+                <button type="button" onclick="closeForm()" class="close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <label>Task Title</label>
+
+            <input type="text" id="gtinp" placeholder="Enter your task" required>
+
+            <button type="submit" class="save-btn">
+                <i class="fa-solid fa-check"></i>
+                Add Task
+            </button>
+
+        </form>
+
+        <div class="task-list">
+
+            <div class="list-header">
+                <h2>Task List</h2>
+            </div>
+
+            <ul id="getul"></ul>
+
+        </div>
+
+    </div>
 
     <script src="./app.js"></script>
+
 </body>
+
 </html>
